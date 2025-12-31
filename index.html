@@ -4,10 +4,10 @@
 
   <meta charset="utf-8">
   <meta name="description"
-        content="Genesis: Multimodal Driving Scene Generation with Spatio-Temporal and Cross-Modal Consistency">
+        content="DriveLaW: Unifying Planning and Video Generation in a Latent Driving World">
   <meta name="keywords" content="Gaussians, Dynamic, Rendering, Splatting">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Genesis: Multimodal Driving Scene Generation with Spatio-Temporal and Cross-Modal Consistency</title>
+  <title>DriveLaW: Unifying Planning and Video Generation in a Latent Driving World</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -52,38 +52,35 @@
           <!-- <h1 class="title is-1 publication-title">RAD: Training an End-to-End Driving Policy via Large-Scale</h1>
           <h1 class="title is-1 publication-title"> 3DGS-based Reinforcement Learning</h1> -->
           <h1 class="title is-1 publication-title" style="white-space: nowrap;">
-            Genesis: Multimodal Driving Scene <u>Gene</u>ration with
+            DriveLaW: 
           </h1>
           <h1 class="title is-1 publication-title" style="white-space: nowrap;">
-            Spatio-Temporal and Cross-Modal Con<u>sis</u>tency
+            Unifying Planning and Video Generation in a Latent Driving World
           </h1>
           
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a>Xiangyu Guo</a><sup>1,*,◇</sup>,
+              <a>Tianze Xia</a><sup>1,2,*</sup>,
             </span>
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=NXIYuY0AAAAJ&hl=en">Zhanqian Wu</a><sup>2,*</sup>,</span>
+              <a href="https://scholar.google.com/citations?user=F7hPv1QAAAAJ&hl=zh-CN&oi=ao">Yongkang Li</a><sup>1,2,*</sup>,</span>
             <span class="author-block">
-              <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=Kh01ChoAAAAJ">Kaixin Xiong</a><sup>2,*</sup>,</span>
+              <a>Lijun Zhou</a><sup>2,*</sup>,</span>
             <span class="author-block">
-              <a href="https://scholar.google.com.hk/citations?hl=zh-CN&user=ZYwJrRMAAAAJ">Ziyang Xu</a><sup>1</sup>,
+              <a href="https://scholar.google.com/citations?user=4qc1qJ0AAAAJ&hl=zh-CN&oi=ao">Jingfeng Yao</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a>Lijun Zhou</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://scholar.google.com/citations?user=ZVYrKpcAAAAJ&hl=zh-CN">Gangwei Xu</a><sup>1,◇</sup>,
+              <a>Kaixin Xiong</a><sup>2</sup>,
             </span>
             <p></p>
-            <span class="author-block">
-              <a>Shaoqing Xu</a><sup>2</sup>,
-            </span>
             <span class="author-block">
               <a>Haiyang Sun</a><sup>2,†</sup>,
             </span>
             <span class="author-block">
               <a>Bing Wang</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a>Kun Ma</a><sup>2</sup>,
             </span>
             <span class="author-block">
               <a>Guang Chen</a><sup>2</sup>,
@@ -105,7 +102,6 @@
             <span class="author-block"><sup>2</sup>Xiaomi EV</span>
             <p></p>
             <span class="author-block"><sup>*</sup>Equal Contributions.</span>
-            <span class="author-block"><sup>◇</sup>Intern of Xiaomi EV.</span>
             <span class="author-block"><sup>†</sup>Project Leader.</span>
             <span class="author-block"><sup>✉</sup>Corresponding Author.</span>
 
@@ -114,7 +110,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2506.07497"
+                <a href="https://arxiv.org/abs/2512.23421"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -123,7 +119,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://github.com/xiaomi-research/genesis"
+                <a href="https://wm-research.github.io/DriveLaW/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -146,7 +142,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present Genesis, a unified framework for joint generation of multi-view driving videos and LiDAR sequences with spatio-temporal and cross-modal consistency. Genesis employs a two-stage architecture that integrates a DiT-based video diffusion model with 3D-VAE encoding, and a BEV-aware LiDAR generator with NeRF-based rendering and adaptive sampling. Both modalities are directly coupled through a shared latent space, enabling coherent evolution across visual and geometric domains. To guide the generation with structured semantics, we introduce DataCrafter, a captioning module built on vision-language models that provides scene-level and instance-level supervision. Extensive experiments on the nuScenes benchmark demonstrate that Genesis achieves state-of-the-art performance across video and LiDAR metrics (FVD 16.95, FID 4.24, Chamfer 0.611), and benefits downstream tasks including segmentation and 3D detection, validating the semantic fidelity and practical utility of the generated data.<br><br><br>
+            World models have become crucial for autonomous driving, as they learn how scenarios evolve over time to address the long-tail challenges of the real world. However, current approaches relegate world models to limited roles: they operate within ostensibly unified architectures that still keep world prediction and motion planning as decoupled processes. To bridge this gap, we propose DriveLaW, a novel paradigm that unifies video generation and motion planning. By directly injecting the latent representation from its video generator into the planner, DriveLaW ensures inherent consistency between high-fidelity future generation and reliable trajectory planning. Specifically, DriveLaW consists of two core components: DriveLaW-Video, our powerful world model that generates high-fidelity forecasting with expressive latent representations, and DriveLaW-Act, a diffusion planner that generates consistent and reliable trajectories from the latent of DriveLaW-Video, with both components optimized by a three-stage progressive training strategy. The power of our unified paradigm is demonstrated by new state-of-the-art results across both tasks. DriveLaW not only advances video prediction significantly, surpassing best-performing work by 33.3% in FID and 1.8% in FVD, but also achieves a new record on the NAVSIM planning benchmark.<br><br><br>
           </p>
         </div>
       </div>
@@ -157,11 +153,21 @@
 
 <section class="section">
   <div class="container is-max-desktop">
+    <h2 class="title is-3" style="white-space: nowrap; display: inline-block;">Motivation</h2>
+    <div class="content has-text-justified">
+      VGM (Video Generation Model) latent features can serve as more efficient and informative conditions for action learning. We visualize and compare three types of latent representations. We apply PCA (Principal Component Analysis) to project each representation to 3 principal components mapped to RGB channels, all upsampled to 1280×704. The visualization clearly shows that BEV and VLM features are diffuse, unstable, and exhibit irregular focus patterns. In contrast, VGM features are sharper, less noisy, and demonstrate superior semantic coherence with strong spatial structure awareness, even under challenging driving conditions. This suggests that VGM features provide a more suitable representation for action learning in autonomous driving.
+    </div>
+    <img src="./static/images/feature.png">
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
     <h2 class="title is-3" style="white-space: nowrap; display: inline-block;">Framework</h2>
     <div class="content has-text-justified">
-      Genesis employs a unified pipeline where both video and LiDAR branches operate within a shared latent space. Vision and geometry are directly coupled through a novel cross-modal conditioning mechanism, enabling consistent temporal evolution and geometric alignment across modalities without relying on occupancy or voxel intermediates.
+      DriveLaW is a unified framework composed of a DriveLaW-Video and a DriveLaW-Act. The video model first encodes past driving frames with a spatiotemporal VAE and encodes textual prompts with a text encoder. A stack of Video DiT blocks then performs latent-space denoising, and the VAE decoder reconstructs the video. Concurrently, action noise, ego status, and high-level commands are encoded and fed into the action model. Video latents from the Video DiT serve as conditioning signals, guiding the Action DiT to output the final trajectory. The Video DiT and Action DiT are chained and trained to learn driving representations from large-scale video generation, providing a shared basis for planning.
     </div>
-    <img src="./static/images/framework.png">
+    <img src="./static/images/drivelaw-framework.png">
   </div>
 </section>
 
@@ -169,7 +175,7 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3" style="white-space: nowrap; display: inline-block;">Joint Generation on nuScenes</h2>
+    <h2 class="title is-3" style="white-space: nowrap; display: inline-block;">Common Video Generation on nuScenes</h2>
     
     <!-- 修改：垂直布局，间距40px，内容居中 -->
     <div style="display: flex; flex-direction: column; gap: 40px; margin-top: 20px; align-items: center;">
@@ -178,7 +184,7 @@
       <div style="text-align: center; width: 100%;">
         <h3 class="title is-5">Clip1</h3>
         <video controls width="100%">
-          <source src="./static/videos/nuc_joint_lc1.mp4" type="video/mp4">
+          <source src="./static/videos/scene_0001_window_000_comparison_converted.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
@@ -187,75 +193,56 @@
       <div style="text-align: center; width: 100%;">
         <h3 class="title is-5">Clip2</h3>
         <video controls width="100%">
-          <source src="./static/videos/nuc_joint_lc2.mp4" type="video/mp4">
+          <source src="./static/videos/scene_0003_window_007_comparison_converted.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
 
+      <!-- 第三个视频块 -->
+      <div style="text-align: center; width: 100%;">
+        <h3 class="title is-5">Clip3</h3>
+        <video controls width="100%">
+          <source src="./static/videos/scene_0007_window_002_comparison_converted.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
+      <!-- 第四个视频块 -->
+      <div style="text-align: center; width: 100%;">
+        <h3 class="title is-5">Clip4</h3>
+        <video controls width="100%">
+          <source src="./static/videos/scene_0014_window_020_comparison_converted.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
 
     </div>
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3" style="white-space: nowrap;">Long-term Multi-View Video Generation on nuScenes</h2>
-    <div class="content has-text-justified">
-      Videos are generated conditioned on 5 initial frames from our nuScenes.
-    </div>
-    <video controls width="100%">
-      <source src="./static/videos/nuc_long1.mp4" type="video/mp4">
-    </video>
-    <video controls width="100%">
-      <source src="./static/videos/nuc_long2.mp4" type="video/mp4">
-    </video>
-    <video controls width="100%">
-      <source src="./static/videos/nuc_long3.mp4" type="video/mp4">
-    </video>
-  </div>
-</section>
 
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3" style="white-space: nowrap; display: inline-block;">Day & Night Generation on nuScenes</h2>
-    <video controls width="100%">
-      <source src="./static/videos/nuc_day_night.mp4" type="video/mp4">
-    </video>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop" >
-    <h2 class="title is-3" style="white-space: nowrap; display: inline-block;">Trajectory-Controlled Generation on nuScenes</h2>
-    <video controls width="100%">
-      <source src="./static/videos/nuc_shift1.mp4" type="video/mp4">
-    </video>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3" style="white-space: nowrap; display: inline-block;">Joint Generation on Private Data</h2>
+    <h2 class="title is-3" style="white-space: nowrap; display: inline-block;">Rainy Video Generation on nuScenes</h2>
+    
     <!-- 修改：垂直布局，间距40px，内容居中 -->
     <div style="display: flex; flex-direction: column; gap: 40px; margin-top: 20px; align-items: center;">
     
       <!-- 第一个视频块 -->
       <div style="text-align: center; width: 100%;">
-        <!-- <h3 class="title is-4">Clip1</h3> -->
+        <h3 class="title is-5">Clip1</h3>
         <video controls width="100%">
-          <source src="./static/videos/private_uni1.mp4" type="video/mp4">
+          <source src="./static/videos/scene_0070_window_014_comparison_converted.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
 
       <!-- 第二个视频块 -->
       <div style="text-align: center; width: 100%;">
-        <!-- <h3 class="title is-4">Clip2</h3> -->
+        <h3 class="title is-5">Clip2</h3>
         <video controls width="100%">
-          <source src="./static/videos/private_uni2.mp4" type="video/mp4">
+          <source src="./static/videos/scene_0074_window_018_comparison_converted.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
       </div>
@@ -264,19 +251,13 @@
   </div>
 </section>
 
-
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3" style="white-space: nowrap;">Long-term Generation(40s) on Private Data</h2>
+    <h2 class="title is-3" style="white-space: nowrap; display: inline-block;">Qualitative results on the Navtest benchmark</h2>
     <div class="content has-text-justified">
-      Videos are generated conditioned on 17 initial frames from our Priavte Data.
+      We present representative cases from the Navtest splits, highlighting DriveLaW’s ability to predict future trajectories while ensuring safety and smoothness.
     </div>
-    <video controls width="100%">
-      <source src="./static/videos/private_long1.mp4" type="video/mp4">
-    </video>
-    <video controls width="100%">
-      <source src="./static/videos/private_long2.mp4" type="video/mp4">
-    </video>
+    <img src="./static/images/navsim-qual.png">
   </div>
 </section>
 
@@ -294,19 +275,19 @@
   <div class="container is-max-desktop">
     <h2 class="title is-3">Video Generation Results</h2>
     <div class="content has-text-justified">
-      Video Generation Comparison on nuScenes validation set, where green and blue represent the best and the second best values.
+      Quantitative evaluation of video generation on the NuScenes validation set. Our method outperforms prior single-view state-of-the-art methods in generation quality.
     </div>
-    <img src="./static/images/video.png">
+    <img src="./static/images/video-gen.png">
   </div>
 </section>
 
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3">LiDAR Generation Results</h2>
+    <h2 class="title is-3">Planning Results</h2>
     <div class="content has-text-justified">
-      Lidar Generation Comparison on nuScenes validation set, where green and blue represent the best and the second best values. ‘gt_img” and gen_img” indicate using ground-truth or generated images as BEV condition input, respectively.
+      Performance comparison on NAVSIM Navtest using closed-loop metrics. Methods are grouped by whether they employ an explicit world model: Traditional End-to-End Methods and World Model Methods.† denotes methods trained with the same flow-matching objective.
     </div>
-    <img src="./static/images/lidar.png">
+    <img src="./static/images/navsim.png">
   </div>
 </section>
 
@@ -355,11 +336,14 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title is-3">BibTeX</h2>
-    <pre><code>@article{guo2025genesis,
-      title={Genesis: Multimodal Driving Scene Generation with Spatio-Temporal and Cross-Modal Consistency},
-      author={Guo, Xiangyu and Wu, Zhanqian and Xiong, Kaixin and Xu, Ziyang and Zhou, Lijun and Xu, Gangwei and Xu, Shaoqing and Sun, Haiyang and Wang, Bing and Chen, Guang and others},
-      journal={arXiv preprint arXiv:2506.07497},
-      year={2025}
+    <pre><code>@misc{xia2025drivelawunifyingplanningvideogeneration,
+      title={DriveLaW:Unifying Planning and Video Generation in a Latent Driving World}, 
+      author={Tianze Xia and Yongkang Li and Lijun Zhou and Jingfeng Yao and Kaixin Xiong and Haiyang Sun and Bing Wang and Kun Ma and Hangjun Ye and Wenyu Liu and Xinggang Wang},
+      year={2025},
+      eprint={2512.23421},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2512.23421}, 
 }</code></pre>
   </div>
 </section>
