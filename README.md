@@ -42,13 +42,10 @@ World models have become crucial for autonomous driving, as they learn how scena
 If you find DriveLaW is useful in your research or applications, please consider giving us a star 🌟 and citing it by the following BibTeX entry.
 
 ```bibtex
-@misc{xia2025drivelawunifyingplanningvideogeneration,
-      title={DriveLaW:Unifying Planning and Video Generation in a Latent Driving World}, 
-      author={Tianze Xia and Yongkang Li and Lijun Zhou and Jingfeng Yao and Kaixin Xiong and Haiyang Sun and Bing Wang and Kun Ma and Hangjun Ye and Wenyu Liu and Xinggang Wang},
-      year={2025},
-      eprint={2512.23421},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2512.23421}, 
+@article{xia2025drivelaw,
+  title={DriveLaW: Unifying Planning and Video Generation in a Latent Driving World},
+  author={Xia, Tianze and Li, Yongkang and Zhou, Lijun and Yao, Jingfeng and Xiong, Kaixin and Sun, Haiyang and Wang, Bing and Ma, Kun and Ye, Hangjun and Liu, Wenyu and others},
+  journal={arXiv preprint arXiv:2512.23421},
+  year={2025}
 }
 ```
