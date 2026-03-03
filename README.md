@@ -1,7 +1,7 @@
 
 <div align="center">
 <h3> DriveLaW: Unifying Planning and Video Generation in a Latent Driving World</h3>
-<h4>CVPR 2026</h4>
+<h3>CVPR 2026</h3>
 Tianze Xia<sup>1,2*</sup>, Yongkang Li<sup>1,2*</sup>, Lijun Zhou<sup>2*</sup>, Jingfeng Yao<sup>1</sup>, Kaixin Xiong<sup>2</sup>, Haiyang Sun<sup>2†</sup>,  Bing Wang<sup>2</sup>,<br>Kun Ma<sup>2</sup>, Guang Chen<sup>2</sup>, Hangjun Ye<sup>2</sup>, Wenyu Liu<sup>1</sup>, Xinggang Wang<sup>1✉</sup>
 
 
@@ -17,6 +17,7 @@ Tianze Xia<sup>1,2*</sup>, Yongkang Li<sup>1,2*</sup>, Lijun Zhou<sup>2*</sup>, 
 
 ## News
 `[2026/2/21]` Our paper has been accepted at CVPR 2026. 🎉
+
 `[2025/12/30]` [ArXiv](https://arxiv.org/abs/2512.23421) paper release. Models/Code are coming soon. Please stay tuned! ☕️
 
 ## Updates
