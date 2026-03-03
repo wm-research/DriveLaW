@@ -1,9 +1,8 @@
 
-
 <div align="center">
-<h3>DriveLaW: Unifying Planning and Video Generation in a Latent Driving World</h3>
-
-Tianze Xia<sup>1,2\*</sup>, Yongkang Li<sup>1,2\*</sup>, Lijun Zhou<sup>2\*</sup>, Jingfeng Yao<sup>1</sup>, Kaixin Xiong<sup>2</sup>, Haiyang Sun<sup>2†</sup>,  Bing Wang<sup>2</sup>,<br>Kun Ma<sup>2</sup>, Guang Chen<sup>2</sup>, Hangjun Ye<sup>2</sup>, Wenyu Liu<sup>1</sup>, Xinggang Wang<sup>1,✉</sup>
+<h3> DriveLaW: Unifying Planning and Video Generation in a Latent Driving World</h3>
+<h4>CVPR 2026</h4>
+Tianze Xia<sup>1,2*</sup>, Yongkang Li<sup>1,2*</sup>, Lijun Zhou<sup>2*</sup>, Jingfeng Yao<sup>1</sup>, Kaixin Xiong<sup>2</sup>, Haiyang Sun<sup>2†</sup>,  Bing Wang<sup>2</sup>,<br>Kun Ma<sup>2</sup>, Guang Chen<sup>2</sup>, Hangjun Ye<sup>2</sup>, Wenyu Liu<sup>1</sup>, Xinggang Wang<sup>1✉</sup>
 
 
 
@@ -16,6 +15,14 @@ Tianze Xia<sup>1,2\*</sup>, Yongkang Li<sup>1,2\*</sup>, Lijun Zhou<sup>2\*</sup
 <a href="https://wm-research.github.io/DriveLaW/"><img src='https://img.shields.io/badge/Project_Page-DriveLaW-green' alt='Project Page'></a>
 </div>
 
+## News
+`[2026/2/21]` Our paper has been accepted at CVPR 2026. 🎉
+`[2025/12/30]` [ArXiv](https://arxiv.org/abs/2512.23421) paper release. Models/Code are coming soon. Please stay tuned! ☕️
+
+## Updates
+- [x] Release Paper   
+- [ ] Release inference & training codes  
+- [ ] Release model weights 
 
 <!-- ## Introduction -->
 ## Abstract
@@ -26,17 +33,18 @@ World models have become crucial for autonomous driving, as they learn how scena
 <img src="assets/images/drivelaw-fig2.png" width="1000">
 </div>
 
-## News
 
 
-`[2025/12/30]` [ArXiv](https://arxiv.org/abs/2512.23421) paper release. Models/Code are coming soon. Please stay tuned! ☕️
 
-## Updates
-- [x] Release Paper   
-- [ ] Release Full Models  
-- [ ] Release Inference Framework 
-- [ ] Release Training Framework 
 
+
+
+
+## Acknowledgments
+
+- Built on [LTX-Video](https://github.com/Lightricks/LTX-Video)
+- Built on [ReCogdrive](https://github.com/xiaomi-research/recogdrive/tree/main)
+- Uses [Diffusers](https://github.com/huggingface/diffusers) library
 
 ## Citation
 If you find DriveLaW is useful in your research or applications, please consider giving us a star 🌟 and citing it by the following BibTeX entry.
