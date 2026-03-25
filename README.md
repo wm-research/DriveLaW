@@ -1,1 +1,1 @@
-🎤 : The official codebase of **BEVFormer** was transfered to [xiaomi-research/drivelaw](https://github.com/xiaomi-research/drivelaw) for better follow-up maintenance!
+🎤 : The official codebase of **DriveLaW** was transfered to [xiaomi-research/drivelaw](https://github.com/xiaomi-research/drivelaw) for better follow-up maintenance!
